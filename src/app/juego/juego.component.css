@@ -1,0 +1,80 @@
+.content {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: radial-gradient(circle, #a88787 0%, #795548 61%);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.board {
+  display: grid;
+  gap: 2px;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+.revealed-bg {
+  background-color: #eee;
+}
+.title_container {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #c70404;
+}
+.title {
+  text-shadow: -1px -1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(8, 8, 8),
+    -1px 1px 0 rgb(7, 7, 7), 1px 1px 0 rgb(5, 5, 5);
+}
+.fs_60 {
+  font-size: 60px;
+}
+.reboot {
+  min-height: 45px;
+  text-align: center;
+}
+.btn {
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background: #18c118;
+}
+.return {
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+.return {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.return i,
+.return::before {
+  margin-right: 8px;
+  text-shadow: -1px -1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(8, 8, 8),
+    -1px 1px 0 rgb(7, 7, 7), 1px 1px 0 rgb(5, 5, 5);
+  color: #c70404;
+}

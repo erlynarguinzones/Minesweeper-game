@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="return" (click)="atras()">
+        <i class="fas fa-arrow-left"></i> Volver
+      </h4>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-12 title_container">
+      <h1 class="title fs_60">Buscaminas</h1>
+      <span class="title">Banderines marcados : {{ remainingMines }}</span>
+    </div>
+  </div>
+  <br />
+  <div class="board row">
+    <div *ngFor="let row of board; let i = index">
+      <div
+        *ngFor="let cell of row; let j = index"
+        class="cell"
+        [ngClass]="{ 'revealed-bg': cell.revealed }"
+        (click)="revealCell(i, j)"
+        (contextmenu)="markPennant($event, i, j)"
+      >
+        <h1 class="m_0">
+          {{
+            cell.pennant
+              ? "🚩"
+              : cell.revealed
+              ? cell.mine
+                ? "💣"
+                : cell.adjacentMines
+              : ""
+          }}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="reboot row">
+    <div class="col-12 center">
+      <button *ngIf="reboot" class="btn" (click)="resetGame()">
+        Reiniciar
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="content">
+  <h1 mat-dialog-title class="titel red" *ngIf="resultado == 'Perdiste'">
+    Seleccionaste una mina 💣 <br />
+    Has perdido😢
+  </h1>
+  <h1 mat-dialog-title class="titel green" *ngIf="resultado == 'Ganaste'">
+    ¡Felicidades! Has ganado 🎉
+  </h1>
+  <h1 mat-dialog-title class="titel green" *ngIf="resultado == 'salir'">
+    Seguro quieres abandonar el juego?, perderas tu progreso.
+  </h1>
+  <div *ngIf="resultado != 'salir'" mat-dialog-actions class="center">
+    <button class="btn" mat-button (click)="reintentar()">
+      Volver a jugar
+    </button>
+  </div>
+  <br />
+  <div *ngIf="resultado != 'salir'" mat-dialog-actions class="center">
+    <button class="btn" mat-button (click)="terminar()">Terminar juego</button>
+  </div>
+  <div *ngIf="resultado == 'salir'" mat-dialog-actions class="center">
+    <button class="btn" mat-button (click)="salir()">Salir</button>
+  </div>
+  <br />
+  <div *ngIf="resultado == 'salir'" mat-dialog-actions class="center">
+    <button class="btn" mat-button (click)="cancelar()">Cancelar</button>
+  </div>
+</div>

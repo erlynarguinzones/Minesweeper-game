@@ -1,0 +1,24 @@
+.content {
+  padding: 20px;
+}
+.titel {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.btn {
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background: #18c118;
+}
+.center {
+  text-align: center;
+}
